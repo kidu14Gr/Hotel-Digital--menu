@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display, Noto_Sans_Ethiopic } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import "./globals.css";
 
 /* ---------- Fonts ---------- */
@@ -26,7 +26,7 @@ const notoEthiopic = Noto_Sans_Ethiopic({
 
 /* ---------- Metadata ---------- */
 export const metadata: Metadata = {
-  title: "Addis Grand Hotel | Digital Menu",
+  title: "Enat Kitchen | Digital Menu",
   description:
     "Browse our curated selection of Ethiopian and international dishes. A premium QR-based digital menu experience.",
 };
@@ -50,8 +50,9 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${notoEthiopic.variable}`}
     >
       <body className="font-sans antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
-        <Analytics />
+        <ThemeProvider>
+          <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

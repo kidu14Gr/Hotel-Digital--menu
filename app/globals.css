@@ -33,6 +33,30 @@
   --gold-light: oklch(0.92 0.06 85);
 }
 
+.dark {
+  --background: oklch(0.13 0.01 60);
+  --foreground: oklch(0.95 0.01 80);
+  --card: oklch(0.18 0.012 60);
+  --card-foreground: oklch(0.95 0.01 80);
+  --popover: oklch(0.18 0.012 60);
+  --popover-foreground: oklch(0.95 0.01 80);
+  --primary: oklch(0.45 0.08 160);
+  --primary-foreground: oklch(0.95 0.01 80);
+  --secondary: oklch(0.24 0.015 60);
+  --secondary-foreground: oklch(0.95 0.01 80);
+  --muted: oklch(0.22 0.012 60);
+  --muted-foreground: oklch(0.65 0.02 80);
+  --accent: oklch(0.78 0.12 85);
+  --accent-foreground: oklch(0.13 0.01 60);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 80);
+  --border: oklch(0.28 0.015 60);
+  --input: oklch(0.28 0.015 60);
+  --ring: oklch(0.45 0.08 160);
+  --gold: oklch(0.78 0.12 85);
+  --gold-light: oklch(0.4 0.06 85);
+}
+
 @theme inline {
   --font-sans: 'Inter', 'Noto Sans Ethiopic', sans-serif;
   --font-serif: 'Playfair Display', serif;
@@ -68,6 +92,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -76,12 +101,14 @@
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hide scrollbar for horizontal category tabs */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import CategoryTabs from "@/components/CategoryTabs";
 import MenuSection from "@/components/MenuSection";
 import { categories, menuItems } from "@/data/menu";
@@ -69,6 +70,9 @@ export default function HomePage() {
         onCategoryClick={handleCategoryClick}
       />
 
+      {/* Hero section — below tabs, above menu cards */}
+      <HeroSection />
+
       {/* Main menu content */}
       <main className="flex flex-col gap-10 px-4 py-6 pb-16">
         {itemsByCategory.map(({ category, items }) => (
@@ -90,7 +94,7 @@ export default function HomePage() {
               : "ዋጋዎች በኢትዮጵያ ብር (ETB) ሲሆኑ ሁሉንም ታክስ ያካትታሉ።"}
           </p>
           <p className="mt-2 font-[var(--font-playfair)] text-sm font-semibold text-foreground">
-            {language === "en" ? "Addis Grand Hotel" : "አዲስ ግራንድ ሆቴል"}
+            {language === "en" ? "Enat Kitchen" : "እናት ኪችን"}
           </p>
           <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">
             {language === "en"

@@ -29,4 +29,13 @@ A modern, mobile-friendly digital menu for hotels and cafes that replaces tradit
 
 **Digital Menu — Modern, simple, and convenient.**  
 
-![alt text](Enat-kitchen-digital-menu.png)
+Menu Link: https://enat-kitchen.netlify.app/
+
+
+![alt text](public/screenshot/QR.png)
+
+## Screenshots
+
+![Screenshot 1](public/screenshot/Screenshot%201.png)
+![Screenshot 2](public/screenshot/Screenshot%202.png)
+![Screenshot 3](public/screenshot/Screenshot%203.png)
